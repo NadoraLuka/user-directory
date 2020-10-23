@@ -6,4 +6,4 @@ export default function Jumbotron() {
       <h1>Employee Directory</h1>
     </div>
   );
-}
+  }

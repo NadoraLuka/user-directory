@@ -1,28 +1,23 @@
 import React from "react";
 
-function EmployeeCard(props) {
+//when using SearchForm, have table update to each letter typed
+
+export default function SearchForm(props) {
   return (
-    <tr>
-      <td>
-        <img alt={props.name} src={props.image} />
-      </td>
-      <td>
-        <strong>Name:</strong> {props.name}
-      </td>
-      <td>
-        <strong>Email:</strong> {props.email}
-      </td>
-      <td>
-        {" "}
-        <strong>DOB:</strong> {props.DOB}
-      </td>
-      <td>
-        {" "}
-        <span onClick={() => props.removeEmployee(props.id)} className="remove">
-          𝘅
-        </span>{" "}
-      </td>
-    </tr>
+    <div className="container">
+      <form>
+        <div className="form-group">
+          <input
+            onChange={props.handleInputChange}
+            value={props.value}
+            name="search"
+            type="text"
+            className="form-control"
+            placeholder="Search For an Employee"
+            id="search"
+          />
+        </div>
+      </form>
+    </div>
   );
 }
-export default EmployeeCard;
