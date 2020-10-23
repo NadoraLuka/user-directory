@@ -1,6 +1,9 @@
 import React from "react";
 
-function Wrapper(props) {
-  return <div className="wrapper">{props.children}</div>;
+export default function Jumbotron() {
+  return (
+    <div className="jumbotron">
+      <h1>Employee Directory</h1>
+    </div>
+  );
 }
-export default Wrapper;
